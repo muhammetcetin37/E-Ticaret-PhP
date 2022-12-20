@@ -36,6 +36,9 @@ $kullanicicek=$kullanicisor->fetch(PDO::FETCH_ASSOC);
   <!-- Bootstrap -->
   <link href="bootstrap\css\bootstrap.min.css" rel="stylesheet">
   
+  <!-- Animate CSS -->
+  <link rel="stylesheet" type="text/css" href="css/animate.css">
+
   <!-- Main Style -->
   <link rel="stylesheet" href="style.css">
   
@@ -58,7 +61,7 @@ $kullanicicek=$kullanicisor->fetch(PDO::FETCH_ASSOC);
       <div class="header"><!--Header -->
        <div class="container">
         <div class="row">
-         <div class="col-xs-6 col-md-4 main-logo">
+         <div class="col-xs-6 col-md-4 main-logo animated flash">
           <a href="index.php"><img width="250" src="<?php echo $ayarcek['ayar_logo'] ?>" alt="Site Logosu" class="logo img-responsive"></a>
         </div>
         

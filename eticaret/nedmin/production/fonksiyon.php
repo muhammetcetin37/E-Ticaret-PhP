@@ -3,6 +3,14 @@ ob_start();
 error_reporting(0);// hata mesajlarını saklar
 session_start();
 
+function islemkontrol () {
+
+    if (empty($_SESSION['kullanici_mail'])) {
+        
+        Header("Location:../../?durum=izinsizerisim1");
+        exit;
+    }
+}
 
 
 function seo($str, $options = array())

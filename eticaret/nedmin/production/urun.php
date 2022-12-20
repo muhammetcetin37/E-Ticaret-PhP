@@ -3,7 +3,7 @@
 include 'header.php'; 
 
 //Belirli veriyi seçme işlemi
-$urunsor=$db->prepare("SELECT * FROM urun order by urun_id DESC");
+$urunsor=$db->prepare("SELECT * FROM urun order by urun_onecikar ASC");
 $urunsor->execute();
 
 

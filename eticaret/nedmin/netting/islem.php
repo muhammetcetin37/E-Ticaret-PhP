@@ -5,6 +5,9 @@ session_start();
 include 'baglan.php';
 include '../production/fonksiyon.php';
 
+
+
+
 if (isset($_POST['kullanicikaydet'])) {
 
 	//echo $kullanici_adsoyad=strip_tags($_POST['kullanici_adsoyad']); echo "<br>";
@@ -244,7 +247,10 @@ if (isset($_POST['sliderduzenle'])) {
 
 // Slider Düzenleme Bitiş
 
+
 if ($_GET['slidersil']=="ok") {
+
+	islemkontrol();
 	
 	$sil=$db->prepare("DELETE from slider where slider_id=:slider_id");
 	$kontrol=$sil->execute(array(
@@ -659,6 +665,8 @@ if (isset($_POST['menuduzenle'])) {
 
 
 if ($_GET['menusil']=="ok") {
+	
+	islemkontrol();
 
 	$sil=$db->prepare("DELETE from menu where menu_id=:id");
 	$kontrol=$sil->execute(array(
